@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const list = document.getElementById(`pdfList-${key}`);
         if (!list) return;
 
-        list.innerHTML = "";
+        // list.innerHTML = ""; // Don't clear static HTML!
         const files = sectionData[key] || [];
 
         files.forEach((file, index) => {
@@ -214,12 +214,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById(`imgList-${key}`);
         if (!grid) return;
 
-        grid.innerHTML = "";
+        // grid.innerHTML = ""; // Don't clear static HTML!
         const images = imageData[key] || [];
 
         const viewBtn = document.getElementById(`viewBtn-${key}`);
         if (viewBtn) {
-            viewBtn.style.display = images.length > 0 ? "inline-flex" : "none";
+            // Allow static or dynamic images to trigger button visibility
+            // Simple fix: Always show if there are elements in the grid or logic?
+            // For now, let's just uncomment the line that hides it or make it smarter.
+            // Actually, if we have static images, we probably want the button visible.
+            // Let's change the logic to check `grid.children.length` or similar.
+            if (images.length > 0 || grid.children.length > 0) {
+                viewBtn.style.display = "inline-flex";
+            }
         }
 
         images.forEach((img, index) => {
@@ -342,7 +349,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3D Carousel Lightbox Logic ---
     window.openLightbox = function (key, selectedIndex) {
-        const imgs = imageData[key];
+        let imgs = imageData[key] || [];
+
+        // If no DB images, check for static images in the DOM
+        if (imgs.length === 0) {
+            const grid = document.getElementById(`imgList-${key}`);
+            if (grid) {
+                const domImgs = grid.querySelectorAll("img");
+                imgs = Array.from(domImgs).map(img => ({ url: img.src }));
+            }
+        }
+
         if (!imgs || imgs.length === 0) return;
 
         currentImageCount = imgs.length;
