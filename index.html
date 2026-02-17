@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Creative Developer featuring modern web design and interactive experiences.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+    <nav class="glass-nav">
+        <div class="logo">Portfolio.Atiphat Pholcha CHS</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#learning">ด้านการจัดการเรียนรู้</a></li>
+            <li><a href="#support">ด้านระบบดูแลช่วยเหลือนักเรียน</a></li>
+            <li><a href="#ethics">ด้านจรรยาบรรณวิชาชีพครู</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </nav>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container hero-split">
+                <div class="hero-text">
+                    <span class="greeting">สวัสดีครับ, ผมนาย อธิภัทร พลซา นิสิตฝึกประสบการณ์วิชาชีพครู
+                        (มหาวิทยาลัยนเรศวร) Naresuan University</span>
+                    <h1 class="glitch-text">Mr.Atiphat Pholcha</h1>
+                    <h2 class="sub-headline">นิสิตฝึกประสบการณ์</h2>
+                    <div class="personal-info-card">
+                        <h3>ข้อมูลส่วนตัว</h3>
+                        <ul class="info-list">
+                            <li><strong>ชื่อ:</strong> อธิภัทร พลซา </li>
+                            <li><strong>ชื่อเล่น:</strong> ฟาร์ม </li>
+                            <li><strong>รหัสนิสิต :</strong> 65413287 </li>
+                            <li><strong>โรงเรียน:</strong> เฉลิมขวัญสตรี (CHS) </li>
+                            <li><strong>กลุ่มสาระฯ:</strong> วิทยาศาสตร์และเทคโนโลยี</li>
+                            <li><strong>การศึกษา:</strong> มหาวิทยาลัยนเรศวร (NU) คณะศึกษาศาสตร์ (EDU)
+                            <li><strong>สาขาวิชา:</strong>คอมพิวเตอร์
+                            <li><strong>อีเมล:</strong> atiphat.p@chs.ac.th</li>
+                            <li><strong>เบอร์โทร:</strong> 087-52xxxxx</li>
+                        </ul>
+                    </div>
+                    <div class="cta-group">
+                        <a href="#learning" class="cta-button primary">ผลงานการสอน</a>
+                        <a href="#contact" class="cta-button secondary">ติดต่อ</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="image-glow"></div>
+                    <img src="1.jpg" alt="Mr.Atiphat Pholcha" class="hero-profile-img">
+
+                    <!-- Floating Badges -->
+                    <img src="NULOGO-Download-EN.png" alt="Science" class="floating-badge badge-1">
+                    <img src="logot.png" alt="Technology" class="floating-badge badge-2">
+                </div>
+            </div>
+        </section>
+        <section id="learning" class="section">
+            <div class="container">
+                <h2 class="section-title">ด้านการจัดการเรียนรู้</h2>
+                <div class="topic-grid">
+                    <!-- 1.1 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="topic-content">
+                            <h3>1.1 แผนการจัดการเรียนรู้</h3>
+                            <p>แผนการจัดการเรียนรู้มัธยมศึกษาปีที่ 2 (วิทยาการคำนวณ)</p>
+                            <div class="media-container">
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-1-1').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-1-1" accept=".pdf" multiple style="display: none;"
+                                        data-section="1-1">
+
+                                    <ul id="pdfList-1-1" class="pdf-list">
+                                        <!-- List items will be injected by JS -->
+                                    </ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-1-1').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-1-1" class="text-button view-btn"
+                                        onclick="openLightbox('1-1', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-1-1" accept="image/*" multiple
+                                        style="display: none;" data-section="1-1" data-type="image">
+                                    <div id="imgList-1-1" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1.2 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="topic-content">
+                            <h3>1.2 สื่อเทคโนโลยี</h3>
+                            <p>สร้างสรรค์สื่อการสอนและนวัตกรรมเทคโนโลยีเพื่อการศึกษา</p>
+                            <div class="media-container">
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-1-2').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-1-2" accept=".pdf" multiple style="display: none;"
+                                        data-section="1-2">
+
+                                    <ul id="pdfList-1-2" class="pdf-list">
+                                        <!-- List items will be injected by JS -->
+                                    </ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-1-2').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-1-2" class="text-button view-btn"
+                                        onclick="openLightbox('1-2', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-1-2" accept="image/*" multiple
+                                        style="display: none;" data-section="1-2" data-type="image">
+                                    <div id="imgList-1-2" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1.3 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="topic-content">
+                            <h3>1.3 การวัดผลและประเมินผล</h3>
+                            <p>เครื่องมือวัดผลที่หลากหลายและสอดคล้องกับวัตถุประสงค์</p>
+                            <div class="media-container">
+                                <!-- PDF -->
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-1-3').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-1-3" accept=".pdf" multiple style="display: none;"
+                                        data-section="1-3">
+                                    <ul id="pdfList-1-3" class="pdf-list"></ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-1-3').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-1-3" class="text-button view-btn"
+                                        onclick="openLightbox('1-3', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-1-3" accept="image/*" multiple
+                                        style="display: none;" data-section="1-3" data-type="image">
+                                    <div id="imgList-1-3" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1.4 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-microscope"></i></div>
+                        <div class="topic-content">
+                            <h3>1.4 วิจัยในชั้นเรียน</h3>
+                            <p>แก้ไขปัญหาและพัฒนาผู้เรียนผ่านกระบวนการวิจัย</p>
+
+                            <div class="media-container">
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-1-4').click()">
+                                        <i class="fa-solid fa-plus-circle"></i> เพิ่มไฟล์วิจัย
+                                    </button>
+                                    <input type="file" id="pdfUpload-1-4" accept=".pdf" multiple style="display: none;"
+                                        data-section="1-4">
+
+                                    <ul id="pdfList-1-4" class="pdf-list">
+                                        <!-- List items will be injected by JS -->
+                                    </ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-1-4').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-1-4" class="text-button view-btn"
+                                        onclick="openLightbox('1-4', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-1-4" accept="image/*" multiple
+                                        style="display: none;" data-section="1-4" data-type="image">
+                                    <div id="imgList-1-4" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1.5 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                        <div class="topic-content">
+                            <h3>1.5 ผลงานนักเรียน</h3>
+                            <p>ส่งเสริมศักยภาพและนำเสนอผลงานสร้างสรรค์ของนักเรียน</p>
+                            <div class="media-container">
+                                <!-- PDF -->
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-1-5').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-1-5" accept=".pdf" multiple style="display: none;"
+                                        data-section="1-5">
+                                    <ul id="pdfList-1-5" class="pdf-list"></ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-1-5').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-1-5" class="text-button view-btn"
+                                        onclick="openLightbox('1-5', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-1-5" accept="image/*" multiple
+                                        style="display: none;" data-section="1-5" data-type="image">
+                                    <div id="imgList-1-5" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="support" class="section">
+            <div class="container">
+                <h2 class="section-title">ด้านระบบดูแลช่วยเหลือนักเรียน</h2>
+                <div class="topic-grid">
+                    <!-- 2.1 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <div class="topic-content">
+                            <h3>2.1 หน้าที่ครูประจำชั้น</h3>
+                            <p>ดูแลและให้คำปรึกษาแก่นักเรียนอย่างใกล้ชิด ติดตามพฤติกรรมและส่งเสริมสุขภาวะที่ดี</p>
+                            <div class="media-container">
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-2-1').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-2-1" accept=".pdf" multiple style="display: none;"
+                                        data-section="2-1">
+
+                                    <ul id="pdfList-2-1" class="pdf-list">
+                                        <!-- List items will be injected by JS -->
+                                    </ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-2-1').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-2-1" class="text-button view-btn"
+                                        onclick="openLightbox('2-1', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-2-1" accept="image/*" multiple
+                                        style="display: none;" data-section="2-1" data-type="image">
+                                    <div id="imgList-2-1" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2.2 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+                        <div class="topic-content">
+                            <h3>2.2 ความสัมพันธ์กับผู้ปกครองและชุมชน</h3>
+                            <p>ส่งเสริมความร่วมมือระหว่างบ้านและโรงเรียน เพื่อการดูแลช่วยเหลือนักเรียนอย่างมีประสิทธิภาพ
+                            </p>
+                            <div class="media-container">
+                                <!-- PDF -->
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-2-2').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-2-2" accept=".pdf" multiple style="display: none;"
+                                        data-section="2-2">
+                                    <ul id="pdfList-2-2" class="pdf-list"></ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-2-2').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-2-2" class="text-button view-btn"
+                                        onclick="openLightbox('2-2', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-2-2" accept="image/*" multiple
+                                        style="display: none;" data-section="2-2" data-type="image">
+                                    <div id="imgList-2-2" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="ethics" class="section">
+            <div class="container">
+                <h2 class="section-title">ด้านจรรยาบรรณวิชาชีพครู</h2>
+                <div class="topic-grid">
+                    <!-- 3.1 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div class="topic-content">
+                            <h3>3.1 การปฏิบัติหน้าที่เวรประจำวัน</h3>
+                            <p>ปฏิบัติหน้าที่เวรประจำวันด้วยความรับผิดชอบ ดูแลความเรียบร้อยและความปลอดภัยของนักเรียน</p>
+                            <div class="media-container">
+                                <!-- PDF -->
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-3-1').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-3-1" accept=".pdf" multiple style="display: none;"
+                                        data-section="3-1">
+                                    <ul id="pdfList-3-1" class="pdf-list"></ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-3-1').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-3-1" class="text-button view-btn"
+                                        onclick="openLightbox('3-1', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-3-1" accept="image/*" multiple
+                                        style="display: none;" data-section="3-1" data-type="image">
+                                    <div id="imgList-3-1" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3.2 -->
+                    <div class="glass-card topic-card">
+                        <div class="topic-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="topic-content">
+                            <h3>3.2 การทำงานร่วมกับผู้อื่นและการมีจิตอาสา</h3>
+                            <p>ร่วมมือทำกิจกรรมกับคณะครูและชุมชนด้วยความเต็มใจ และมีจิตสาธารณะในการช่วยเหลือผู้อื่น</p>
+                            <div class="media-container">
+                                <div class="pdf-section">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('pdfUpload-3-2').click()">
+                                        <i class="fa-solid fa-file-pdf"></i> เพิ่มไฟล์ PDF
+                                    </button>
+                                    <input type="file" id="pdfUpload-3-2" accept=".pdf" multiple style="display: none;"
+                                        data-section="3-2">
+
+                                    <ul id="pdfList-3-2" class="pdf-list">
+                                        <!-- List items will be injected by JS -->
+                                    </ul>
+                                </div>
+                                <!-- Image -->
+                                <div class="image-section" style="margin-top: 15px;">
+                                    <button class="text-button upload-btn"
+                                        onclick="document.getElementById('imgUpload-3-2').click()">
+                                        <i class="fa-solid fa-images"></i> เพิ่มรูปภาพ
+                                    </button>
+                                    <button id="viewBtn-3-2" class="text-button view-btn"
+                                        onclick="openLightbox('3-2', 0)" style="display: none; margin-left: 10px;">
+                                        <i class="fa-solid fa-cube"></i> ดูแกลเลอรี่ 3D
+                                    </button>
+                                    <input type="file" id="imgUpload-3-2" accept="image/*" multiple
+                                        style="display: none;" data-section="3-2" data-type="image">
+                                    <div id="imgList-3-2" class="image-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">ช่องทางการติดต่อ</h2>
+                <div class="glass-card contact-card">
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+                        สามารถติดต่อสอบถามเพิ่มเติมได้ผ่านช่องทางดังนี้</p>
+                    <div class="social-grid">
+                        <a href="#" class="social-item facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-item line">
+                            <i class="fa-brands fa-line"></i>
+                            <span>Line ID</span>
+                        </a>
+                        <a href="tel:08752xxxxx" class="social-item phone">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>087-52xxxxx</span>
+                        </a>
+                        <a href="mailto:atiphat.p@chs.ac.th" class="social-item email">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>atiphat.p@chs.ac.th</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="glass-footer">
+        <p>&copy; 2024 Mr.Atiphat Pholcha. All rights reserved.</p>
+    </footer>
+    <div id="pdfModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h3>ตัวอย่างไฟล์ PDF</h3>
+                <a id="downloadLink" href="#" download class="download-btn"><i class="fa-solid fa-download"></i>
+                    Download</a>
+            </div>
+            <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+        </div>
+    </div>
+    <!-- Lightbox 3D Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="carousel-scene">
+            <div id="carousel" class="carousel">
+                <!-- 3D Items injected by JS -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
